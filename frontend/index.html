@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GitOps Demo Shop">
+    <title>GitOps Demo Shop</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <header class="hero">
+        <div class="container">
+            <p class="eyebrow">GITOPS DEMO PROJECT</p>
+            <h1>GitOps Demo Shop</h1>
+            <p class="subtitle">
+                A production-style learning application for Docker, Kubernetes,
+                Kustomize and Argo CD.
+            </p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="status-card" aria-labelledby="status-heading">
+            <div>
+                <p class="eyebrow">BACKEND STATUS</p>
+                <h2 id="status-heading">Checking API...</h2>
+                <p id="status-message">Connecting to the backend service.</p>
+            </div>
+            <span id="status-badge" class="badge">CHECKING</span>
+        </section>
+
+        <section>
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">PRODUCTS</p>
+                    <h2>Featured products</h2>
+                </div>
+                <p id="product-count"></p>
+            </div>
+
+            <div id="products" class="product-grid" aria-live="polite"></div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>GitOps Demo Shop · Application version <span id="version">loading...</span></p>
+        </div>
+    </footer>
+
+    <script src="/app.js" defer></script>
+</body>
+</html>
